@@ -122,6 +122,95 @@
             transform: scale(1.05);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
         }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* เปลี่ยนพื้นหลังเป็นสีขาว */
+            color: #000;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .ranking {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            background-color: #ffcc00; /* สีพื้นของอันดับ */
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .dish:hover .ranking {
+            background-color: #fa8900; /* เปลี่ยนเป็นสีส้มเมื่อ hover */
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            margin-bottom: 40px;
+        }
+        .dishes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .dish {
+            background-color: #f0f0f0; /* สีพื้นหลังของการ์ด */
+            padding: 20px;
+            border-radius: 10px;
+            width: 220px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+        .dish:hover {
+            background-color: #e0e0e0; /* สีพื้นหลังของการ์ดเมื่อ hover */
+        }
+        .dish img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .dish h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .center-image {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            border-radius: 50%;
+            border: 10px solid #383838;
+        }
+        .about-cafe-section {
+            background-color: #f9f9f9; /* สีพื้นหลังของแถบข้อมูล */
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            border: 5px solid #ddd;
+        }
+
+        .about-cafe-section .row {
+            align-items: center;
+        }
     </style>
 
 </head>
@@ -175,7 +264,7 @@
                     <div class="container">
                         <div class="carousel-caption d-none d-sm-block">
                             <h1 class="display-3">CAKE</h1>
-                            <p>Text</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -183,7 +272,7 @@
                    <div class="container">
                        <div class="carousel-caption d-none d-sm-block">
                            <h1 class="display-3">DRINK</h1>
-                           <p>Text</p>
+                           
                        </div>
                    </div>
                 </div>
@@ -191,7 +280,7 @@
                    <div class="container">
                        <div class="carousel-caption d-none d-sm-block">
                            <h1 class="display-3">BREAD</h1>
-                           <p>Text</p>
+                           
                        </div>
                    </div>
                 </div> 
@@ -250,6 +339,83 @@
         </div>
     </div>
     </div>
+
+    <!-- Thai Dishes Section -->
+    <div class="container">
+        <div class="header">
+            <h1>เมนูยอดฮิตประจำร้าน</h1>
+            <p>รวมเมนูยอดนิยมที่ติดอันดับ จัดอันดับโดยลูกค้าประจำร้าน</p>
+        </div>
+        <img class="center-image" src="h3/pic9.jpg" alt="Center Dish Image">
+        <div class="dishes">
+            <div class="dish">
+                <div class="ranking">1</div>
+                <img src="h3/pic8.jpg" alt="กล้วยหอมจอมซน">
+                <h3>กล้วยหอมจอมซน</h3>
+                <p>เมนูเค้กผลไม้ยอดฮิตที่ทางร้านแนะนำ</p>
+            </div>
+            <div class="dish">
+                <div class="ranking">2</div>
+                <img src="h3/pic10.png" alt="เค้กรูปกบ">
+                <h3>เค้กรูปกบ</h3>
+                <p>เมนูเค้กรูปแปลกที่สุดที่ลูกค้าส่วนใหญ่สนใจ</p>
+            </div>
+            <div class="dish">
+                <div class="ranking">3</div>
+                <img src="h3/pic11.jpg" alt="croissant">
+                <h3>croissant</h3>
+                <p>เมนูขนมปังยอดฮิตที่ทุกคนควรสั่ง</p>
+            </div>
+            <div class="dish">
+                <div class="ranking">4</div>
+                <img src="h3/pic13.jpg" alt="ขนมปังพันเบคอน">
+                <h3>ขนมปังพันเบคอน</h3>
+                <p>เมนูขนมปังสุดปังที่การันตีด้วยยอดขายูงสุดประจำเดือน</p>
+            </div>
+            <div class="dish">
+                <div class="ranking">5</div>
+                <img src="h3/pic6 (1).jpg" alt="ชาไทย">
+                <h3>ชาไทยในตำนาน</h3>
+                <p>ชาที่ลูกค้าส่วนใหญ่สั่งทุกครั้งที่มา</p>
+            </div>
+            <div class="dish">
+                <div class="ranking">6</div>
+                <img src="h3/pic14.jpg" alt="มะม่วงสตรอว์เบอร์รีสมูทตี้">
+                <h3>มะม่วงสตรอว์เบอร์รีสมูทตี้</h3>
+                <p>เมนูสดชื่นๆที่คนส่วนใหญ่แนะนำ</p>
+            </div>
+            <div class="dish">
+                <div class="ranking">7</div>
+                <img src="h3/pic12.jpg" alt="ข้าวเหนียวมะม่วง">
+                <h3>ข้าวเหนียวมะม่วง</h3>
+                <p>ของหวานอาหารไทยที่ใครๆก็ต้องสั่ง</p>
+            </div>
+            <div class="dish">
+                <div class="ranking">8</div>
+                <img src="h3/pic15.jpg" alt="ผัดไทย">
+                <h3>ผัดไท</h3>
+                <p>อาหารไทยที่ก้าวไปสู่อาหารระดับโลก</p>
+            </div>
+        </div>
+    </div>
+    <section id="about-cafe" class="about-cafe-section mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="section-title">เกี่ยวกับร้าน</h2>
+                    <p class="about-text">
+                        ยินดีต้อนรับสู่ IJABBI Cafe ร้านกาแฟสุดเก๋ที่มีบรรยากาศอบอุ่นและเป็นกันเอง ตั้งอยู่ในใจกลางเมือง เรามีเมนูหลากหลายไม่ว่าจะเป็นเค้ก ขนมปัง และเครื่องดื่มที่ได้รับการคัดสรรอย่างดีเพื่อให้ลูกค้าได้รับประสบการณ์ที่ดีที่สุด ทุกเมนูของเราใช้วัตถุดิบที่สดใหม่และปรุงอย่างพิถีพิถัน
+                    </p>
+                    <p class="about-text">
+                        ร้านของเรามีที่นั่งสะดวกสบายและบรรยากาศที่เป็นกันเอง เหมาะสำหรับการพบปะสังสรรค์กับเพื่อนฝูงหรือการทำงานนอกสถานที่ ท่านสามารถมาที่ร้านเพื่อเพลิดเพลินกับอาหารและเครื่องดื่มในบรรยากาศที่เป็นเอกลักษณ์ของเรา
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="h3/pic16.jpg" alt="About Us" class="img-fluid about-image">
+                </div>
+            </div>
+        </div>
+    </section>
 
    <!-- footer -->
    <footer class="footer mt-5">
