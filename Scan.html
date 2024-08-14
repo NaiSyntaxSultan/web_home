@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ijabbi Cafe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer+Caps:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+         body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('download (4).jpg'); 
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7; 
+            z-index: -1;
+        }
+        .navbar-custom {
+            background-color: #000000; 
+        }
+        .navbar-brand {
+            font-family: 'Nosifer Caps', sans-serif;
+            font-weight: 700;
+            
+        }
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .order-container {
+            padding: 20px;
+            border-radius: 60px;
+            margin-top: 20px;
+        }
+        
+        
+        .order-item {
+            background-color: #e5c1a3;
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .order-item img {
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        
+        .order-item .input-group {
+            max-width: 120px; /* ปรับขนาดกล่องจำนวนให้เล็กลง */
+            margin-left: auto; /* ดันกล่องจำนวนไปชิดขวา */
+        }
+        
+        .order-item .input-group .form-control {
+            text-align: center; /* กำหนดให้ตัวเลขอยู่ตรงกลาง */
+            width: 50px; /* ปรับขนาดกล่อง input ให้น้อยลง */
+        }
+        
+        .order-item .input-group-prepend .btn,
+        .order-item .input-group-append .btn {
+            margin: 0; /* กำจัดระยะห่างระหว่างปุ่ม */
+            padding: 5px 10px; /* ปรับขนาดปุ่ม */
+        }
+
+        .order-total, .order-buttons {
+            margin-top: 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+        }
+
+        .order-total {
+            margin-top: 20px;
+            margin-left: 400px;
+            margin-right: 20px;
+            text-align: right;
+            font-size: 1.2rem;
+        }
+
+        .btn-total {
+            background-color: #f1dede;
+            color: rgb(0, 0, 0);
+            width: 120px; /* กำหนดขนาดความกว้างให้เท่ากับช่องจำนวน */
+            text-align: center; /* ทำให้ข้อความจัดเรียงอยู่ตรงกลาง */
+        }
+        .btn-custom {
+            background-color: #9a6a4f;
+            color: rgb(252, 251, 251);
+        }
+        .btn-custom-cancel {
+            background-color: #f5ebe0;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-custom"> 
+        <div class="container">
+            <a href="Home.html" class="navbar-brand">
+                <img src="img/1.png" alt="Logo"> IJABBI CAFE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar1" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="Home.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="new.html" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="SHOP.html" class="navbar-brand">
+                <i class="bi bi-cart-fill"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="container order-container">
+        <div style="background-color: #e0f7ff; padding: 20px; border-radius: 15px; text-align: center; font-family: 'Hinnual', sans-serif; max-width: 400px; margin: auto; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: #000000;">ช่องทางการชำระเงิน</h2>
+            <div style="background-color: #ffffff; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                <img src="img/scan/20230907_logo_KTB-connext2.png" alt="Bank Logo" style="width: 125px;">
+                <p style="margin: 10px 0; color: #000000;">ธนาคาร กรุงไทย</p>
+                <p style="margin: 10px 0; color: rgb(0, 0, 0);">ชื่อบัญชี: IJABBI CAFE</p>
+                <p style="margin: 10px 0; color: #000000;">เลขบัญชี: 0123 4567 8901</p>
+            </div>
+            <div style="background-color: #f0f0f0; padding: 15px; border-radius: 10px;">
+                <p style="color: #000000;">SCAN HERE !</p>
+                <img src="img/scan/453080054_422270114178860_3912063486000966152_n.png" alt="Bank Logo" style="width: 250px;">
+
+                <p style="margin-top: 20px; color: #000000;">ขอบคุณลูกค้าที่อุดหนุน</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
