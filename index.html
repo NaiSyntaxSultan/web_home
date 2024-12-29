@@ -3,430 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Activity 04 – Bootstrap Resume – Naikamon Sangkaew – 66105685</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,
+    700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
+    <!-- Icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Linden+Hill:ital@0;1&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Nosifer&display=swap');
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    .loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .disppear {
-        animation: vanish 2s forwards;
-    }
-    @keyframes vanish{
-        100% {
-            opacity: 0;
-            visibility: hidden;
-        }
-    }
-    .carousel-item{
-        height: 500px;
-    }
-    #about {
-        min-height: 100px;
-        position: relative;
-        background: black;
-        background-size: cover;
-        background-repeat: no-repeat;
-        text-align: center;
-        color: white;
-    }
-    .dark-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: black;
-        width: 100%;
-        height: 100%;
-    }
-    .footer {
-        background-color: rgba(0, 0, 0, 0.1);
-        padding: 20px 0;
-        color: #000;
-        font-family: 'Quicksand', sans-serif;
-    }
-    .footer-text {
-        margin: 0;
-        font-size: 16px;
-    }
-
-    .footer-text a {
-        color: #ff5733;
-        text-decoration: none;
-    }
-
-    .footer-text a:hover {
-        text-decoration: underline;
-    }
-    .card-container {
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .card {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card img {
-            border-bottom: 1px solid #ddd;
-        }
-        .card-title {
-            font-weight: bold;
-        }
-        .card-text {
-            color: #555;
-        }
-        .card-body a {
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .btn-custom {
-            background-color: #ff5733;
-            border: none;
-        }
-        .btn-custom:hover {
-            background-color: #c70039;
-        }
-        .btn-featured {
-            background-color: #fa8900;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 5px;
-            text-align: center;
-            display: inline-block;
-            margin: 10px 0;
-        }
-        .btn-featured:hover {
-            background-color: #000000;
-        }
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff; /* เปลี่ยนพื้นหลังเป็นสีขาว */
-            color: #000;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .ranking {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            background-color: #ffcc00; /* สีพื้นของอันดับ */
-            color: #000;
-            padding: 5px 10px;
-            border-radius: 50%;
-            font-weight: bold;
-        }
-        .dish:hover .ranking {
-            background-color: #fa8900; /* เปลี่ยนเป็นสีส้มเมื่อ hover */
-            color: white;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            margin-bottom: 40px;
-        }
-        .dishes {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .dish {
-            background-color: #f0f0f0; /* สีพื้นหลังของการ์ด */
-            padding: 20px;
-            border-radius: 10px;
-            width: 220px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            position: relative;
-            transition: background-color 0.3s ease;
-        }
-        .dish:hover {
-            background-color: #e0e0e0; /* สีพื้นหลังของการ์ดเมื่อ hover */
-        }
-        .dish img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .dish h3 {
-            margin: 10px 0;
-            font-size: 1.2em;
-        }
-        .center-image {
-            width: 250px;
-            height: 250px;
-            margin: 20px auto;
-            border-radius: 50%;
-            border: 10px solid #383838;
-        }
-        .about-cafe-section {
-            background-color: #f9f9f9; /* สีพื้นหลังของแถบข้อมูล */
-            padding: 40px 0;
-        }
-
-        .section-title {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .about-text {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        .about-image {
-            border-radius: 10px;
-            border: 5px solid #ddd;
-        }
-
-        .about-cafe-section .row {
-            align-items: center;
-        }
+        body { background-color: #e9ecef; }
+        a { text-decoration: none; }
     </style>
 
 </head>
-<body>
-    
-    <!-- Loader -->
-    <div class="loader">
-        <img src="img/loader/load-gif.gif">
+<body class="bg-dark bg-gradient">
+
+    <div class="alert alert-primary fixed-top" role="alert">
+        Naikamon Sangkaew – 66105685
     </div>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: black;"> 
-        <div class="container">
-            <a href="index.html" class="navbar-brand d-flex justify-content-start align-items-center">
-                <img src="img/logo/logo.png" style="width: 100px;">
-                <h2 class="ps-3" style="font-family: Nosifer, sans-serif;">IJABBI CAFE</h2>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navbar1" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="new.html" class="nav-link">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Contacts</a>
-                    </li>
-                </ul>
-                <a href="SHOP.html" class="nav-link ps-5"><i class="bi bi-cart-check-fill fs-2 text-danger"></i></a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- การสร้าง Slider -->
-    <section id="slider">
-        <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
-            <ol class="carousel-indicators">
-                <button data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
-                <button data-bs-target="#mySlider" data-bs-slide-to="1"></button>
-                <button data-bs-target="#mySlider" data-bs-slide-to="2"></button>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active" style="background-image: url('img/home/pic1.jpg');">
-                    <div class="container">
-                        <div class="carousel-caption d-none d-sm-block">
-                            <h1 class="display-3">CAKE</h1>
-                            
+    
+    <div class="d-flex flex-nowrap">
+        <div class="bg-light shadow w-75 mx-auto my-5 align-items-center">
+            <section name="TopDetail" class="text-bg-primary bg-gradient d-flex flex-row">
+                <div name="ProfilePicture" class="col"><img src="https://media.discordapp.net/attachments/596667838706745346/1322763519396937789/IMG_0227.jpg?ex=67720f06&is=6770bd86&hm=0ce499af0a7757d8dfae017677c99fa7d9a124aaaf4e5945b3d9697570eae8db&=&format=webp&width=526&height=702" class="img-fluid"></div>
+                <div class="m-auto ps-5 col-9">
+                    <div name="NameAndLink" class="row">
+                        <div name="Name" class="col">
+                            <h2>NAIKAMON SANGKAEW</h2>
+                            <h4>Handsome Student</h4>
+                            <a class="icon-link link-light" href="mailto:naikamon.sa@mail.wu.ac.th">
+                                <span class="material-symbols-outlined">mail</span>naikamon.sa@mail.wu.ac.th
+                            </a>
+                        </div>
+                        <div name="Link" class="col-4">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="icon-link link-light" href="portfolio.html">
+                                        <span class="material-symbols-outlined">emoji_events</span> Portfolio
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="border border-light border-2 opacity-75">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="icon-link link-light" href="https://github.com/NaiSyntaxSultan/" target="_blank">
+                                        <i class="fa-brands fa-github"></i> Github
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="icon-link link-light" href="https://www.youtube.com/@CodeCraft-th" target="_blank">
+                                        <i class="fa-brands fa-youtube"></i> Youtube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="icon-link link-light" href="https://www.instagram.com/onebullet._/profilecard/?igsh=eXk2NWd4ZTNhZ25w" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i> Instagram
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('img/home/pic2.jpg');">
-                   <div class="container">
-                       <div class="carousel-caption d-none d-sm-block">
-                           <h1 class="display-3">DRINK</h1>
-                           
-                       </div>
-                   </div>
+            </section>
+            <section name="Resume" class="m-5">
+                <div name="Summary">
+                    <strong>SUMMARY</strong>
+                    <hr>
+                    <p>
+                        Naikamon Sangkaew is about to graduate with a bachelor's degree in computer engineering from Walailak University (WU), Nakhon Si Thammarat, and he will land a very well-paying job. He is truly a handsome person.
+                    </p>
                 </div>
-                <div class="carousel-item" style="background-image: url('img/home/pic3.jpg');">
-                   <div class="container">
-                       <div class="carousel-caption d-none d-sm-block">
-                           <h1 class="display-3">BREAD</h1>
-                           
-                       </div>
-                   </div>
-                </div> 
-                <button class="carousel-control-prev" data-bs-target="#mySlider" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" data-bs-target="#mySlider" data-bs-slide="next">
-                   <span class="carousel-control-next-icon"></span>
-               </button>
-            </div>
-        </div>
-   </section>
-
-   <!-- about -->
-   <section id="about" class="p-5">
-        <div class="dark-overlay">
-            <div class="row">
-                <div class="col">
-                    <div class="container pt-4">
-                        <h1>Fulfill Your Happiness In Every Menu</h1>
+                <div name="Experience" class="d-flex flex-row mt-5">
+                    <div class="col-7">
+                        <strong>WORK EXPERIENCE</strong>
+                        <hr>
+                        <div class="mb-5">
+                            <div class="hstack gap-3 mb-3">
+                                <div><strong>Frontend Developer</strong></div><div class="ms-auto">XYZ Tech Solutions</div>
+                                <div class="vr"></div><div>2022 – Present</div>
+                            </div>
+                            <p>
+                                Led the development and maintenance of responsive web applications using HTML, CSS, and Bootstrap, ensuring an intuitive and seamless user experience across all devices and browsers.
+                            </p>
+                            <br>
+                            <div class="hstack gap-3 mb-3">
+                                <div><strong>Backend Developer</strong></div><div class="ms-auto">ABC Software Solutions</div>
+                                <div class="vr"></div><div>2020 – 2021</div>
+                            </div>
+                            <p>
+                                Worked extensively with PHP to build and integrate custom web applications with existing platforms.
+                            </p>
+                            <br>
+                            <div class="hstack gap-3 mb-3">
+                                <div><strong>Full Stack Developer</strong></div><div class="ms-auto">Innovative Web Studio</div>
+                                <div class="vr"></div><div>2018 – 2020</div>
+                            </div>
+                            <p>
+                                Developed full-stack applications using a combination of Java, PHP, Node.js, and React to provide end-to-end solutions.
+                            </p>
+                            <br>
+                            <div class="hstack gap-3 mb-3">
+                                <div><strong>Junior Software Developer</strong></div><div class="ms-auto">Digital Solutions Ltd.</div>
+                                <div class="vr"></div><div>2017 – 2018</div>
+                            </div>
+                            <p>
+                                Collaborated with senior developers to design and implement responsive layouts using Bootstrap and custom CSS.
+                            </p>
                     </div>
                 </div>
-            </div>
-        </div>
-   </section>
-
-   <!-- button -->
-   <div class="container mt-4 text-center">
-        <a href="menu.html" class="btn btn-featured">Proud to present</a>
-    </div>
-
-    <!-- card -->
-    <div class="card-container">
-        <div class="card mt-5" style="width: 18rem;">
-            <img src="/img/home/pic5.jpg" class="card-img-top" alt="popular1">
-        <div class="card-body">
-            <h5 class="card-title">Grape Cake</h5>
-            <p class="card-text">เมนูยอดฮิตสำหรับวัยรุ่น</p>
-            <a href="menu.html" class="btn btn-custom">Order cakes</a>
-        </div>
-    </div>
-    <div class="card mt-5" style="width: 18rem;">
-        <img src="/img/home/pic6.jpg" class="card-img-top" alt="popular2">
-        <div class="card-body">
-            <h5 class="card-title">Thai Tea</h5>
-            <p class="card-text">เมนูยอดฮิตสำหรับผู้ใหญ่</p>
-            <a href="menu.html" class="btn btn-custom">Order drinks</a>
-        </div>
-    </div>
-    <div class="card mt-5" style="width: 18rem;">
-        <img src="/img/home/pic7.jpg" class="card-img-top" alt="popular3">
-        <div class="card-body">
-            <h5 class="card-title">Thai Tea</h5>
-            <p class="card-text">เมนูยอดฮิตสำหรับทุกคน</p>
-            <a href="menu.html" class="btn btn-custom">Order bread</a>
-        </div>
-    </div>
-    </div>
-
-    <!-- Thai Dishes Section -->
-    <div class="container">
-        <div class="header">
-            <h1>เมนูยอดฮิตประจำร้าน</h1>
-            <p>รวมเมนูยอดนิยมที่ติดอันดับ จัดอันดับโดยลูกค้าประจำร้าน</p>
-        </div>
-        <img class="center-image" src="h3/pic9.jpg" alt="Center Dish Image">
-        <div class="dishes">
-            <div class="dish">
-                <div class="ranking">1</div>
-                <img src="h3/pic8.jpg" alt="กล้วยหอมจอมซน">
-                <h3>กล้วยหอมจอมซน</h3>
-                <p>เมนูเค้กผลไม้ยอดฮิตที่ทางร้านแนะนำ</p>
-            </div>
-            <div class="dish">
-                <div class="ranking">2</div>
-                <img src="h3/pic10.png" alt="เค้กรูปกบ">
-                <h3>เค้กรูปกบ</h3>
-                <p>เมนูเค้กรูปแปลกที่สุดที่ลูกค้าส่วนใหญ่สนใจ</p>
-            </div>
-            <div class="dish">
-                <div class="ranking">3</div>
-                <img src="h3/pic11.jpg" alt="croissant">
-                <h3>croissant</h3>
-                <p>เมนูขนมปังยอดฮิตที่ทุกคนควรสั่ง</p>
-            </div>
-            <div class="dish">
-                <div class="ranking">4</div>
-                <img src="h3/pic13.jpg" alt="ขนมปังพันเบคอน">
-                <h3>ขนมปังพันเบคอน</h3>
-                <p>เมนูขนมปังสุดปังที่การันตีด้วยยอดขายูงสุดประจำเดือน</p>
-            </div>
-            <div class="dish">
-                <div class="ranking">5</div>
-                <img src="h3/pic6 (1).jpg" alt="ชาไทย">
-                <h3>ชาไทยในตำนาน</h3>
-                <p>ชาที่ลูกค้าส่วนใหญ่สั่งทุกครั้งที่มา</p>
-            </div>
-            <div class="dish">
-                <div class="ranking">6</div>
-                <img src="h3/pic14.jpg" alt="มะม่วงสตรอว์เบอร์รีสมูทตี้">
-                <h3>มะม่วงสตรอว์เบอร์รีสมูทตี้</h3>
-                <p>เมนูสดชื่นๆที่คนส่วนใหญ่แนะนำ</p>
-            </div>
-            <div class="dish">
-                <div class="ranking">7</div>
-                <img src="h3/pic12.jpg" alt="ข้าวเหนียวมะม่วง">
-                <h3>ข้าวเหนียวมะม่วง</h3>
-                <p>ของหวานอาหารไทยที่ใครๆก็ต้องสั่ง</p>
-            </div>
-            <div class="dish">
-                <div class="ranking">8</div>
-                <img src="h3/pic15.jpg" alt="ผัดไทย">
-                <h3>ผัดไท</h3>
-                <p>อาหารไทยที่ก้าวไปสู่อาหารระดับโลก</p>
-            </div>
-        </div>
-    </div>
-    <section id="about-cafe" class="about-cafe-section mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 class="section-title">เกี่ยวกับร้าน</h2>
-                    <p class="about-text">
-                        ยินดีต้อนรับสู่ IJABBI Cafe ร้านกาแฟสุดเก๋ที่มีบรรยากาศอบอุ่นและเป็นกันเอง ตั้งอยู่ในใจกลางเมือง เรามีเมนูหลากหลายไม่ว่าจะเป็นเค้ก ขนมปัง และเครื่องดื่มที่ได้รับการคัดสรรอย่างดีเพื่อให้ลูกค้าได้รับประสบการณ์ที่ดีที่สุด ทุกเมนูของเราใช้วัตถุดิบที่สดใหม่และปรุงอย่างพิถีพิถัน
-                    </p>
-                    <p class="about-text">
-                        ร้านของเรามีที่นั่งสะดวกสบายและบรรยากาศที่เป็นกันเอง เหมาะสำหรับการพบปะสังสรรค์กับเพื่อนฝูงหรือการทำงานนอกสถานที่ ท่านสามารถมาที่ร้านเพื่อเพลิดเพลินกับอาหารและเครื่องดื่มในบรรยากาศที่เป็นเอกลักษณ์ของเรา
-                    </p>
+                <div class="col ms-5">
+                    <div class="mb-5">
+                        <strong>EDUCATION</strong>
+                        <hr>
+                        <ul class="list-unstyled">
+                            <li>
+                                <strong>Matthayom 1-3 (2019)</strong>
+                                <p>AMCEP Srithammaratsuksa School English Programme</p>
+                            </li>
+                            <li>
+                                <strong>Matthayom 4-6 (2022)</strong>
+                                <p>Ronphibunkiatwasuntharaphiwat School</p>
+                            </li>
+                            <li>
+                                <strong>Computer Engineering and AI (2027)</strong>
+                                <p>Walailak University</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-5">
+                        <strong>SKILLS & TOOLS</strong>
+                        <hr>
+                        <div class="mb-3">
+                            Frontend<br>
+                            <span class="badge text-bg-primary">HTML/CSS</span>
+                            <span class="badge text-bg-secondary">Bootstrap</span>
+                            <span class="badge text-bg-success">JavaScript</span>
+                            <span class="badge text-bg-danger">TypeScript</span>
+                            <span class="badge text-bg-warning">React</span>
+                        </div>
+                        <div class="mb-3">
+                            Backend<br>
+                            <span class="badge text-bg-primary">PHP</span>
+                            <span class="badge text-bg-secondary">C#</span>
+                            <span class="badge text-bg-success">Node.js</span>
+                            <span class="badge text-bg-danger">Java</span>
+                            <span class="badge text-bg-warning">Ruby</span>
+                        </div>
+                        <div class="mb-3">
+                            Database<br>
+                            <span class="badge text-bg-primary">MySQL</span>
+                            <span class="badge text-bg-secondary">PostgreSQL</span>
+                            <span class="badge text-bg-success">SQLite</span>
+                            <span class="badge text-bg-danger">MongoDB</span>
+                            <span class="badge text-bg-warning">CouchDB</span>
+                        </div>
+                        <div class="mb-3">
+                            Others<br>
+                            <span class="badge text-bg-primary">IOT</span>
+                            <span class="badge text-bg-secondary">UX/UI</span>
+                            <span class="badge text-bg-success">C Programming</span>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <strong>INTERESTS</strong>
+                        <hr>
+                        <ul class="list-unstyled">
+                            <li>
+                                <strong>Cybersecurity</strong>
+                                <p>Interested in ethical hacking, penetration testing, and improving software security practices.</p>
+                            </li>
+                            <li>
+                                <strong>Game Development</strong>
+                                <p>Designing and developing indie games or interactive applications to explore creative programming skills.</p>
+                            </li>
+                            <li>
+                                <strong>Learning New Programming Languages</strong>
+                                <p>Exploring new and emerging programming languages to expand my knowledge and adapt to evolving technologies.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="h3/pic16.jpg" alt="About Us" class="img-fluid about-image">
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
-
-   <!-- footer -->
-   <footer class="footer mt-5">
-        <div class="container text-center">
-            <p class="footer-text">For inquiries, please contact us at <a href="mailto:contact@ijabbicafe.com">contact@ijabbicafe.com</a></p>
-            <p class="footer-text">Follow us on <a href="#">Facebook</a> and <a href="#">Instagram</a></p>
+    </div>
+    <footer class="mb-5">
+        <div class="text-center">
+            <a class="icon-link link-danger text-light" href="https://www.royalthaipolice.go.th/index.php">
+                <span class="material-symbols-outlined">copyright</span> Naikamon Sangkaew | Updated: Oct 01, 2004
+            </a>
         </div>
     </footer>
 
-
-    <script src="index.js"></script>
 </body>
 </html>
