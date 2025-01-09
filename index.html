@@ -3,212 +3,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity 04 – Bootstrap Resume – Naikamon Sangkaew – 66105685</title>
+    <title>Activity 06 – Tailwind Yearbook– Naikamon Sangkaew – 66105685</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,
-    700;1,900&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    
-    <!-- Icon -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <style>
-        body { background-color: #e9ecef; }
-        a { text-decoration: none; }
+        .balloon {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 50;
+            width: 150px;
+            height: 200px;
+            background-size: cover;
+        }
+        .balloon-left {
+            left: 30px;
+            background-image: url('https://www.pngarts.com/files/4/Balloon-PNG-High-Quality-Image.png');
+        }
+        .balloon-right {
+            right: 30px;
+            background-image: url('https://www.pngarts.com/files/4/Balloon-PNG-High-Quality-Image.png');
+        }
     </style>
-
-</head>
-<body class="bg-dark bg-gradient">
-
-    <div class="alert alert-primary fixed-top" role="alert">
-        Naikamon Sangkaew – 66105685
-    </div>
     
-    <div class="d-flex flex-nowrap">
-        <div class="bg-light shadow w-75 mx-auto my-5 align-items-center">
-            <section name="TopDetail" class="text-bg-primary bg-gradient d-flex flex-row">
-                <div name="ProfilePicture" class="col"><img src="https://media.discordapp.net/attachments/596667838706745346/1322763519396937789/IMG_0227.jpg?ex=67720f06&is=6770bd86&hm=0ce499af0a7757d8dfae017677c99fa7d9a124aaaf4e5945b3d9697570eae8db&=&format=webp&width=526&height=702" class="img-fluid"></div>
-                <div class="m-auto ps-5 col-9">
-                    <div name="NameAndLink" class="row">
-                        <div name="Name" class="col">
-                            <h2>NAIKAMON SANGKAEW</h2>
-                            <h4>Handsome Student</h4>
-                            <a class="icon-link link-light" href="mailto:naikamon.sa@mail.wu.ac.th">
-                                <span class="material-symbols-outlined">mail</span>naikamon.sa@mail.wu.ac.th
-                            </a>
-                        </div>
-                        <div name="Link" class="col-4">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class="icon-link link-light" href="portfolio.html">
-                                        <span class="material-symbols-outlined">emoji_events</span> Portfolio
-                                    </a>
-                                </li>
-                            </ul>
-                            <hr class="border border-light border-2 opacity-75">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class="icon-link link-light" href="https://github.com/NaiSyntaxSultan/" target="_blank">
-                                        <i class="fa-brands fa-github"></i> Github
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="icon-link link-light" href="https://www.youtube.com/@CodeCraft-th" target="_blank">
-                                        <i class="fa-brands fa-youtube"></i> Youtube
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="icon-link link-light" href="https://www.instagram.com/onebullet._/profilecard/?igsh=eXk2NWd4ZTNhZ25w" target="_blank">
-                                        <i class="fa-brands fa-instagram"></i> Instagram
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+</head>
+<body class="bg-yellow-200 p-10">
+
+    <div class="text-right">
+        <a href="https://engineer.wu.ac.th/?page_id=13448&lang=en" target="_blank" class="text-green-700 mt-2 text-2xl inline-block hover:underline"><i class="fa-solid fa-globe hover:text-red-500 "></i></a>
+    </div>
+
+    
+    <!-- Balloons -->
+    <div class="balloon balloon-left"></div>
+    <div class="balloon balloon-right"></div>
+
+    <!-- Header Section -->
+    <header class="w-full sm:w-10/12 lg:w-8/12 mx-auto my-10 bg-green-500 p-10 rounded-lg shadow-lg mb-6 text-center" style="background-image: url('https://i.pinimg.com/originals/35/63/f6/3563f658bf0fd93a57a2d00ed4d48b79.jpg'); background-position: 50% 50%;">
+        <h1 class="text-4xl font-bold text-emerald-800 mb-2">COEAI66 - Yearbook <i class="fa-solid fa-book"></i></h1>
+        <h3 class="text-2xl font-bold text-emerald-800">WU Computer Engineering and AI</h3>
+    </header>
+    <div class="container w-full sm:w-10/12 lg:w-8/12 mx-auto my-10 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-green-500">
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/Jom.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Khajohn Muenbal</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Jom</strong> 66101072</p>
+                    <p class="text-gray-600 mt-1">Life is like a door, never trust a cow because the sun can't swim</p>
+                    <a href="https://www.facebook.com/khajohn.muenbal.2024" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/jxm.m_/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@khajohn1907mb" class="text-black-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
-            </section>
-            <section name="Resume" class="m-5">
-                <div name="Summary">
-                    <strong>SUMMARY</strong>
-                    <hr>
-                    <p>
-                        Naikamon Sangkaew is about to graduate with a bachelor's degree in computer engineering from Walailak University (WU), Nakhon Si Thammarat, and he will land a very well-paying job. He is truly a handsome person.
-                    </p>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/Thanakrit-Pakkothanang1.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Thanakrit Pakkothanang</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Act</strong> 66104241</p>
+                    <p class="text-gray-600 mt-1">Siuuuuuuuuu</p>
+                    <a href="https://www.facebook.com/thanakrit.pakkothanang/" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/Thanakrxt_/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
                 </div>
-                <div name="Experience" class="d-flex flex-row mt-5">
-                    <div class="col-7">
-                        <strong>WORK EXPERIENCE</strong>
-                        <hr>
-                        <div class="mb-5">
-                            <div class="hstack gap-3 mb-3">
-                                <div><strong>Frontend Developer</strong></div><div class="ms-auto">XYZ Tech Solutions</div>
-                                <div class="vr"></div><div>2022 – Present</div>
-                            </div>
-                            <p>
-                                Led the development and maintenance of responsive web applications using HTML, CSS, and Bootstrap, ensuring an intuitive and seamless user experience across all devices and browsers.
-                            </p>
-                            <br>
-                            <div class="hstack gap-3 mb-3">
-                                <div><strong>Backend Developer</strong></div><div class="ms-auto">ABC Software Solutions</div>
-                                <div class="vr"></div><div>2020 – 2021</div>
-                            </div>
-                            <p>
-                                Worked extensively with PHP to build and integrate custom web applications with existing platforms.
-                            </p>
-                            <br>
-                            <div class="hstack gap-3 mb-3">
-                                <div><strong>Full Stack Developer</strong></div><div class="ms-auto">Innovative Web Studio</div>
-                                <div class="vr"></div><div>2018 – 2020</div>
-                            </div>
-                            <p>
-                                Developed full-stack applications using a combination of Java, PHP, Node.js, and React to provide end-to-end solutions.
-                            </p>
-                            <br>
-                            <div class="hstack gap-3 mb-3">
-                                <div><strong>Junior Software Developer</strong></div><div class="ms-auto">Digital Solutions Ltd.</div>
-                                <div class="vr"></div><div>2017 – 2018</div>
-                            </div>
-                            <p>
-                                Collaborated with senior developers to design and implement responsive layouts using Bootstrap and custom CSS.
-                            </p>
-                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/Ta.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Thanaphat Chainarong</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Ta</strong> 66104365</p>
+                    <p class="text-gray-600 mt-1">Anything is possible</p>
+                    <a href="https://www.facebook.com/thanaphat.chainarong.50" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/ta_.thana/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
                 </div>
-                <div class="col ms-5">
-                    <div class="mb-5">
-                        <strong>EDUCATION</strong>
-                        <hr>
-                        <ul class="list-unstyled">
-                            <li>
-                                <strong>Matthayom 1-3 (2019)</strong>
-                                <p>AMCEP Srithammaratsuksa School English Programme</p>
-                            </li>
-                            <li>
-                                <strong>Matthayom 4-6 (2022)</strong>
-                                <p>Ronphibunkiatwasuntharaphiwat School</p>
-                            </li>
-                            <li>
-                                <strong>Computer Engineering and AI (2027)</strong>
-                                <p>Walailak University</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="mb-5">
-                        <strong>SKILLS & TOOLS</strong>
-                        <hr>
-                        <div class="mb-3">
-                            Frontend<br>
-                            <span class="badge text-bg-primary">HTML/CSS</span>
-                            <span class="badge text-bg-secondary">Bootstrap</span>
-                            <span class="badge text-bg-success">JavaScript</span>
-                            <span class="badge text-bg-danger">TypeScript</span>
-                            <span class="badge text-bg-warning">React</span>
-                        </div>
-                        <div class="mb-3">
-                            Backend<br>
-                            <span class="badge text-bg-primary">PHP</span>
-                            <span class="badge text-bg-secondary">C#</span>
-                            <span class="badge text-bg-success">Node.js</span>
-                            <span class="badge text-bg-danger">Java</span>
-                            <span class="badge text-bg-warning">Ruby</span>
-                        </div>
-                        <div class="mb-3">
-                            Database<br>
-                            <span class="badge text-bg-primary">MySQL</span>
-                            <span class="badge text-bg-secondary">PostgreSQL</span>
-                            <span class="badge text-bg-success">SQLite</span>
-                            <span class="badge text-bg-danger">MongoDB</span>
-                            <span class="badge text-bg-warning">CouchDB</span>
-                        </div>
-                        <div class="mb-3">
-                            Others<br>
-                            <span class="badge text-bg-primary">IOT</span>
-                            <span class="badge text-bg-secondary">UX/UI</span>
-                            <span class="badge text-bg-success">C Programming</span>
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <strong>INTERESTS</strong>
-                        <hr>
-                        <ul class="list-unstyled">
-                            <li>
-                                <strong>Cybersecurity</strong>
-                                <p>Interested in ethical hacking, penetration testing, and improving software security practices.</p>
-                            </li>
-                            <li>
-                                <strong>Game Development</strong>
-                                <p>Designing and developing indie games or interactive applications to explore creative programming skills.</p>
-                            </li>
-                            <li>
-                                <strong>Learning New Programming Languages</strong>
-                                <p>Exploring new and emerging programming languages to expand my knowledge and adapt to evolving technologies.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/First.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Naikamon Sangkaew</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">First</strong> 66105685</p>
+                    <p class="text-gray-600 mt-1">Make Some Pill</p>
+                    <a href="https://www.facebook.com/pegasus9m/" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/onebullet._/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@firstzm2" class="text-black-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://dooball66z.com/" class="text-lime-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-solid fa-globe"></i></a>
                 </div>
-            </section>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/Niti-Singchao.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Niti Singchao</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Copter</strong> 66105834</p>
+                    <p class="text-gray-600 mt-1">OMG !! ! !! ! !! ! !!</p>
+                    <a href="https://www.facebook.com/niti.singchao.7" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/niti_.s/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/Pongpipat.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Pongpipat Muangdung</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Oak</strong> 66107251</p>
+                    <p class="text-gray-600 mt-1">ไม่ได้เบียว แค่เป็นหนึ่งเดียวกับ Messi</p>
+                    <a href="https://www.facebook.com/pongpipat.muangdung/" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/oak_pongpipat/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://readrealm.co/" class="text-lime-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/Pisit-Rodkleang.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Pisit Rodkleang</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Seen</strong> 66108168</p>
+                    <p class="text-gray-600 mt-1">Living life is the riskiest gamble!!!</p>
+                    <a href="https://www.facebook.com/pisit.rodkleang.2024" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/star_.dust1/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/66108853-Panarin-Jengsiri.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Panarin Jengsiri</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Ping</strong> 66108853</p>
+                    <p class="text-gray-600 mt-1">No dedication No Achievement</p>
+                    <a href="https://www.facebook.com/profile.php?id=100027126890285" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/7.userpxnrin/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@_ppxjr" class="text-black-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/James.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Veerapat Phumitorn</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">James</strong> 66110669</p>
+                    <p class="text-gray-600 mt-1">THC Full Time</p>
+                    <a href="https://www.facebook.com/veerapat.phoomitorn" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/j.james_zz8/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@veerapat140264" class="text-black-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/Bossfccf8cad7fccfbac.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Siriwit Fueakhong</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Boss</strong> 66111741</p>
+                    <p class="text-gray-600 mt-1">U are MyFirstKiss</p>
+                    <a href="https://www.facebook.com/profile.php?id=100007958987274" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/_._myfirstkiss/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/baom.apinan.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Apinan Aryuyong</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">BEAM</strong> 66112772</p>
+                    <p class="text-gray-600 mt-1">Shared Beauty, Shared Joy</p>
+                    <a href="https://www.facebook.com/apinan.aryuyong" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/beam.in.motion/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@bx_xm" class="text-black-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/Ahmad-aduwa-Da-oh.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Ahmad-aduwa Da-oh</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Wa</strong> 66113424</p>
+                    <p class="text-gray-600 mt-1">My Problem Is my homework</p>
+                    <a href="https://www.facebook.com/amadaduwa.daoh.1" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/pae_adwaa/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://ufa888.company/" class="text-lime-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/ChutiponCentralcfff2cd09f31b8ae.th.jpeg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Chutipon Promdee</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Central</strong> 66114315</p>
+                    <p class="text-gray-600 mt-1">Why!! Why!! Why you read this. do you know you lost your time.</p>
+                    <a href="https://www.facebook.com/central.tone" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/_centralllxlll/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/Nattapong.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Nattapong Rungratchot</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Benz</strong> 66117938</p>
+                    <p class="text-gray-600 mt-1">Think carefully before taking action</p>
+                    <a href="https://www.facebook.com/nathth.phngs.rung.ratn.choti" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/bexz.rc/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/woraphat.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Woraphat Hwancham</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Jab</strong> 66118613</p>
+                    <p class="text-gray-600 mt-1">โตขึ้นอยากเป็นเศรษฐี  แต่พอรู้จักหมี เศรษฐีก็ไม่ได้เป็นอีกเลย</p>
+                    <a href="https://www.facebook.com/profile.php?id=100028402636307" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/jobjab_ww/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/Ausanisa_Nice.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Ausanisa Pankaew</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Nice!!!!</strong> 66120155</p>
+                    <p class="text-gray-600 mt-1">Victory is your own future.</p>
+                    <a href="https://www.facebook.com/n21a50" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/n._.ice2me1t5y0u/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/GOLF.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Nawapat Jeenchuay</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Golf</strong> 66120890</p>
+                    <p class="text-gray-600 mt-1">Ahh shit , here we go again.</p>
+                    <a href="https://www.facebook.com/ggolf.nawapat" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/nong.gobx/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@nong_gobx" class="text-black-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/66121708-pongsathorn.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Pongsathorn Mutchimapiro</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Bank</strong> 66121708</p>
+                    <p class="text-gray-600 mt-1">หมากรุกจะเดินยังต้องคิด หมากชีวิตจะเดินโดยไม่คิดได้ไงbro</p>
+                    <a href="https://www.facebook.com/bank3612" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/bank_pongsathorn/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/charmilAL.th.png" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">charmil alee</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Mil</strong> 66123217</p>
+                    <p class="text-gray-600 mt-1">"fi dunya wal akhirah"</p>
+                    <a href="https://www.facebook.com/charmil.alee.2024" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/chxmil/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.wu.ac.th/" class="text-lime-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/Narasak.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Narasak Thongphijit</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Poom</strong> 66123365</p>
+                    <p class="text-gray-600 mt-1">Live today as if it were your last.</p>
+                    <a href="https://www.facebook.com/narasak.thongphijit.9" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/nrsk_1/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/thakchinan.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Thakchinan Paksong</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Kim</strong> 66124009</p>
+                    <p class="text-gray-600 mt-1">Good</p>
+                    <a href="https://www.facebook.com/Takchinan" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/kimtachina_/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@thakchinan" class="text-black-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/Teerapat-Bunchuai.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Teerapat Bunchuai</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Dook</strong> 66124934</p>
+                    <p class="text-gray-600 mt-1">When in doubt, take a nap.</p>
+                    <a href="https://www.facebook.com/thir.phathr.buychwy.2024" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/zet_zero_0/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/Natdanai.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Natdanai Yongsatar</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Nai</strong> 66125923</p>
+                    <p class="text-gray-600 mt-1">saw thum</p>
+                    <a href="https://www.facebook.com/natdanai.yongsatar/" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/natdanai_yst/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/Sil.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Basil Ben-Alee</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Sil</strong> 66127275</p>
+                    <p class="text-gray-600 mt-1">If you love risking, go to........ALPHA888!!!</p>
+                    <a href="https://www.facebook.com/profile.php?id=100081312680506" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/sil.mufc/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/BEAM.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Raphephat Kaoian</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Beam</strong> 66129438</p>
+                    <p class="text-gray-600 mt-1">มหาลัยอันดับต้น ถนนอันดับ....????? 999</p>
+                    <a href="https://www.facebook.com/profile.php?id=100023796870376" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/_beamrapeephat/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/Kun.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Kittisak Maneemangkang</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Kun</strong> 66130238</p>
+                    <p class="text-gray-600 mt-1">Look back, don't look back.</p>
+                    <a href="https://www.facebook.com/kittisak.maneemangkang" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/lalala.kkm/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img5.pic.in.th/file/secure-sv1/Peeniti-Pikunngam.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Peeniti Pikunngam</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Seian</strong> 66132226</p>
+                    <p class="text-gray-600 mt-1">Good sleep Good life</p>
+                    <a href="https://www.facebook.com/พีร์นิธิ พิกุลงาม" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/se_anx/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center hover:bg-blue-100">
+                <img src="https://img2.pic.in.th/pic/66133950-Parintorn.th.jpg" class="rounded-full w-24 h-24 mr-4">
+                <div>
+                    <strong class="font-bold text-xl">Parintorn Kongphol</strong>
+                    <p class="text-gray-600 mt-1"><strong class="text-cyan-500 text-sm">Jean</strong> 66133950</p>
+                    <p class="text-gray-600 mt-1">After Tuesday even the calender go WT....</p>
+                    <a href="https://www.facebook.com/jean.ny.174528" class="text-sky-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/jean_nyl/" class="text-pink-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@jean.eng.jaa" class="text-black-700 mt-2 inline-block hover:underline" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
         </div>
     </div>
-    <footer class="mb-5">
-        <div class="text-center">
-            <a class="icon-link link-danger text-light" href="https://www.royalthaipolice.go.th/index.php">
-                <span class="material-symbols-outlined">copyright</span> Naikamon Sangkaew | Updated: Oct 01, 2004
-            </a>
-        </div>
-    </footer>
 
+    <!-- Footer Section -->
+    <footer class="w-full sm:w-10/12 lg:w-8/12 mx-auto my-10 bg-green-500 p-6 rounded-lg shadow-lg text-center text-white">
+        <p class="text-lg font-bold">COEAI66 - Yearbook</p>
+        <p class="text-sm">© 2023 WU Computer Engineering and AI. All rights reserved.</p>
+    </footer>
 </body>
 </html>
